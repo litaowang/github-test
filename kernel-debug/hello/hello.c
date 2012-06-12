@@ -1,0 +1,28 @@
+#include <linux/module.h>
+#include <linux/init.h>
+
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR("litao.wang");
+MODULE_DESCRIPTION("a simple modules test for printk");
+
+static int __init hello_init(void)
+{
+        printk(KERN_EMERG "hello KERN_EMERG!\n");
+        printk(KERN_ERR "hello KERN_ERR!\n");
+	printk(KERN_WARNING "hello KERN_WARNING!\n");
+	printk(KERN_NOTICE "hello KERN_NOTICE!\n");
+	printk(KERN_INFO "hello KERN_INFO!\n");
+        printk(KERN_DEBUG "hello KERN_DEBUG!\n");
+
+	printk(KERN_DEBUG,"%s:%d:%s\n",__FILE__,__LINE__,__func__);
+	printk(KERN_EMERG,"%s:%d:%s\n",__FILE__,__LINE__,__func__);
+	printk(KERN_INFO,"%s:%d:%s\n",__FILE__,__LINE__,__func__);
+	return 0;
+}
+static void __exit hello_exit(void)
+{
+	printk(KERN_EMERG "hello exit!\n");
+	printk(KERN_INFO,"%s:%d:%s\n",__FILE__,__LINE__,__FUNCTION__);
+}
+module_init(hello_init);
+module_exit(hello_exit);
