@@ -1,0 +1,21 @@
+118,120c118,119
+<    8:	69 74 61 6f 20 57 61 	imul   $0x6e615720,0x6f(%ecx,%eiz,2),%esi
+<    f:	6e 
+<   10:	67 00 6c 69          	add    %ch,0x69(%si)
+---
+>    8:	69 74 61 6f 00 6c 69 	imul   $0x63696c00,0x6f(%ecx,%eiz,2),%esi
+>    f:	63 
+122,127c121,126
+< 00000012 <__mod_license46>:
+<   12:	6c                   	insb   (%dx),%es:(%edi)
+<   13:	69 63 65 6e 73 65 3d 	imul   $0x3d65736e,0x65(%ebx),%esp
+<   1a:	47                   	inc    %edi
+<   1b:	50                   	push   %eax
+<   1c:	4c                   	dec    %esp
+---
+> 0000000d <__mod_license46>:
+>    d:	6c                   	insb   (%dx),%es:(%edi)
+>    e:	69 63 65 6e 73 65 3d 	imul   $0x3d65736e,0x65(%ebx),%esp
+>   15:	47                   	inc    %edi
+>   16:	50                   	push   %eax
+>   17:	4c                   	dec    %esp

@@ -1,0 +1,164 @@
+
+oops.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <D>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 ec 04             	sub    $0x4,%esp
+   6:	e8 fc ff ff ff       	call   7 <D+0x7>
+   b:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+  12:	e8 fc ff ff ff       	call   13 <D+0x13>
+  17:	c7 05 00 00 00 00 0b 	movl   $0xb,0x0
+  1e:	00 00 00 
+  21:	c9                   	leave  
+  22:	c3                   	ret    
+  23:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+  29:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+00000030 <C>:
+  30:	55                   	push   %ebp
+  31:	89 e5                	mov    %esp,%ebp
+  33:	83 ec 04             	sub    $0x4,%esp
+  36:	e8 fc ff ff ff       	call   37 <C+0x7>
+  3b:	c7 04 24 0c 00 00 00 	movl   $0xc,(%esp)
+  42:	e8 fc ff ff ff       	call   43 <C+0x13>
+  47:	e8 fc ff ff ff       	call   48 <C+0x18>
+  4c:	c9                   	leave  
+  4d:	c3                   	ret    
+  4e:	66 90                	xchg   %ax,%ax
+
+00000050 <B>:
+  50:	55                   	push   %ebp
+  51:	89 e5                	mov    %esp,%ebp
+  53:	83 ec 04             	sub    $0x4,%esp
+  56:	e8 fc ff ff ff       	call   57 <B+0x7>
+  5b:	c7 04 24 18 00 00 00 	movl   $0x18,(%esp)
+  62:	e8 fc ff ff ff       	call   63 <B+0x13>
+  67:	e8 fc ff ff ff       	call   68 <B+0x18>
+  6c:	c9                   	leave  
+  6d:	c3                   	ret    
+  6e:	66 90                	xchg   %ax,%ax
+
+00000070 <A>:
+  70:	55                   	push   %ebp
+  71:	89 e5                	mov    %esp,%ebp
+  73:	83 ec 04             	sub    $0x4,%esp
+  76:	e8 fc ff ff ff       	call   77 <A+0x7>
+  7b:	c7 04 24 24 00 00 00 	movl   $0x24,(%esp)
+  82:	e8 fc ff ff ff       	call   83 <A+0x13>
+  87:	e8 fc ff ff ff       	call   88 <A+0x18>
+  8c:	c9                   	leave  
+  8d:	c3                   	ret    
+  8e:	66 90                	xchg   %ax,%ax
+
+00000090 <init_module>:
+  90:	55                   	push   %ebp
+  91:	89 e5                	mov    %esp,%ebp
+  93:	83 ec 04             	sub    $0x4,%esp
+  96:	e8 fc ff ff ff       	call   97 <init_module+0x7>
+  9b:	c7 04 24 30 00 00 00 	movl   $0x30,(%esp)
+  a2:	e8 fc ff ff ff       	call   a3 <init_module+0x13>
+  a7:	e8 fc ff ff ff       	call   a8 <init_module+0x18>
+  ac:	31 c0                	xor    %eax,%eax
+  ae:	c9                   	leave  
+  af:	c3                   	ret    
+
+000000b0 <cleanup_module>:
+  b0:	55                   	push   %ebp
+  b1:	89 e5                	mov    %esp,%ebp
+  b3:	83 ec 04             	sub    $0x4,%esp
+  b6:	e8 fc ff ff ff       	call   b7 <cleanup_module+0x7>
+  bb:	c7 04 24 3b 00 00 00 	movl   $0x3b,(%esp)
+  c2:	e8 fc ff ff ff       	call   c3 <cleanup_module+0x13>
+  c7:	c9                   	leave  
+  c8:	c3                   	ret    
+
+Disassembly of section .rodata.str1.1:
+
+00000000 <.rodata.str1.1>:
+   0:	46                   	inc    %esi
+   1:	75 6e                	jne    71 <A+0x1>
+   3:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+   7:	6e                   	outsb  %ds:(%esi),(%dx)
+   8:	20 44 0a 00          	and    %al,0x0(%edx,%ecx,1)
+   c:	46                   	inc    %esi
+   d:	75 6e                	jne    7d <A+0xd>
+   f:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+  13:	6e                   	outsb  %ds:(%esi),(%dx)
+  14:	20 43 0a             	and    %al,0xa(%ebx)
+  17:	00 46 75             	add    %al,0x75(%esi)
+  1a:	6e                   	outsb  %ds:(%esi),(%dx)
+  1b:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+  1f:	6e                   	outsb  %ds:(%esi),(%dx)
+  20:	20 42 0a             	and    %al,0xa(%edx)
+  23:	00 46 75             	add    %al,0x75(%esi)
+  26:	6e                   	outsb  %ds:(%esi),(%dx)
+  27:	63 74 69 6f          	arpl   %si,0x6f(%ecx,%ebp,2)
+  2b:	6e                   	outsb  %ds:(%esi),(%dx)
+  2c:	20 41 0a             	and    %al,0xa(%ecx)
+  2f:	00 6f 6f             	add    %ch,0x6f(%edi)
+  32:	70 73                	jo     a7 <init_module+0x17>
+  34:	20 69 6e             	and    %ch,0x6e(%ecx)
+  37:	69 74 0a 00 6f 6f 70 	imul   $0x73706f6f,0x0(%edx,%ecx,1),%esi
+  3e:	73 
+  3f:	20 65 78             	and    %ah,0x78(%ebp)
+  42:	69                   	.byte 0x69
+  43:	74 21                	je     66 <B+0x16>
+  45:	0a 00                	or     (%eax),%al
+
+Disassembly of section .modinfo:
+
+00000000 <__mod_author47>:
+   0:	61                   	popa   
+   1:	75 74                	jne    77 <A+0x7>
+   3:	68 6f 72 3d 4c       	push   $0x4c3d726f
+   8:	69 74 61 6f 00 6c 69 	imul   $0x63696c00,0x6f(%ecx,%eiz,2),%esi
+   f:	63 
+
+0000000d <__mod_license46>:
+   d:	6c                   	insb   (%dx),%es:(%edi)
+   e:	69 63 65 6e 73 65 3d 	imul   $0x3d65736e,0x65(%ebx),%esp
+  15:	47                   	inc    %edi
+  16:	50                   	push   %eax
+  17:	4c                   	dec    %esp
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    %al,0x43(%edi)
+   3:	43                   	inc    %ebx
+   4:	3a 20                	cmp    (%eax),%ah
+   6:	28 55 62             	sub    %dl,0x62(%ebp)
+   9:	75 6e                	jne    79 <A+0x9>
+   b:	74 75                	je     82 <A+0x12>
+   d:	2f                   	das    
+   e:	4c                   	dec    %esp
+   f:	69 6e 61 72 6f 20 34 	imul   $0x34206f72,0x61(%esi),%ebp
+  16:	2e 36 2e 31 2d 39 75 	cs ss xor %ebp,%cs:%ss:0x75627539
+  1d:	62 75 
+  1f:	6e                   	outsb  %ds:(%esi),(%dx)
+  20:	74 75                	je     97 <init_module+0x7>
+  22:	33 29                	xor    (%ecx),%ebp
+  24:	20 34 2e             	and    %dh,(%esi,%ebp,1)
+  27:	36 2e 31 00          	ss xor %eax,%cs:%ss:(%eax)
+
+Disassembly of section __mcount_loc:
+
+00000000 <__mcount_loc>:
+   0:	06                   	push   %es
+   1:	00 00                	add    %al,(%eax)
+   3:	00 36                	add    %dh,(%esi)
+   5:	00 00                	add    %al,(%eax)
+   7:	00 56 00             	add    %dl,0x0(%esi)
+   a:	00 00                	add    %al,(%eax)
+   c:	76 00                	jbe    e <__mcount_loc+0xe>
+   e:	00 00                	add    %al,(%eax)
+  10:	96                   	xchg   %eax,%esi
+  11:	00 00                	add    %al,(%eax)
+  13:	00                   	.byte 0x0
+  14:	b6 00                	mov    $0x0,%dh
+	...

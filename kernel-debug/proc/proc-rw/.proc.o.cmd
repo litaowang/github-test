@@ -1,8 +1,8 @@
-cmd_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := gcc -Wp,-MD,/usr/little/github-test/github-test/kernel-debug/oops/.oops.o.d  -nostdinc -isystem /usr/lib/gcc/i686-linux-gnu/4.6.1/include  -I/usr/src/linux-headers-3.0.0-12-generic/arch/x86/include -Iarch/x86/include/generated -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(oops)"  -D"KBUILD_MODNAME=KBUILD_STR(oops)" -c -o /usr/little/github-test/github-test/kernel-debug/oops/.tmp_oops.o /usr/little/github-test/github-test/kernel-debug/oops/oops.c
+cmd_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.o := gcc -Wp,-MD,/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/.proc.o.d  -nostdinc -isystem /usr/lib/gcc/i686-linux-gnu/4.6.1/include  -I/usr/src/linux-headers-3.0.0-12-generic/arch/x86/include -Iarch/x86/include/generated -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(proc)"  -D"KBUILD_MODNAME=KBUILD_STR(proc)" -c -o /usr/little/github-test/github-test/kernel-debug/proc/proc-rw/.tmp_proc.o /usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.c
 
-source_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := /usr/little/github-test/github-test/kernel-debug/oops/oops.c
+source_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.o := /usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.c
 
-deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := \
+deps_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.o := \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
     $(wildcard include/config/sysfs.h) \
@@ -479,7 +479,65 @@ deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := \
   include/asm-generic/module.h \
   include/trace/events/module.h \
   include/trace/define_trace.h \
+  include/linux/proc_fs.h \
+    $(wildcard include/config/proc/devicetree.h) \
+    $(wildcard include/config/proc/kcore.h) \
+  include/linux/slab.h \
+    $(wildcard include/config/slab/debug.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/slub.h) \
+    $(wildcard include/config/slob.h) \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/slab.h) \
+  include/linux/slub_def.h \
+    $(wildcard include/config/slub/stats.h) \
+    $(wildcard include/config/slub/debug.h) \
+  include/linux/kmemleak.h \
+    $(wildcard include/config/debug/kmemleak.h) \
+  include/linux/fs.h \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/debug/writecount.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/auditsyscall.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/fs/xip.h) \
+    $(wildcard include/config/migration.h) \
+  include/linux/limits.h \
+  include/linux/blk_types.h \
+    $(wildcard include/config/blk/dev/integrity.h) \
+  include/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/path.h \
+  include/linux/radix-tree.h \
+  include/linux/pid.h \
+  include/linux/capability.h \
+  include/linux/semaphore.h \
+  include/linux/fiemap.h \
+  include/linux/quota.h \
+    $(wildcard include/config/quota/netlink/interface.h) \
+  include/linux/percpu_counter.h \
+  include/linux/dqblk_xfs.h \
+  include/linux/dqblk_v1.h \
+  include/linux/dqblk_v2.h \
+  include/linux/dqblk_qtree.h \
+  include/linux/nfs_fs_i.h \
+  include/linux/nfs.h \
+  include/linux/sunrpc/msg_prot.h \
+  include/linux/inet.h \
+  include/linux/fcntl.h \
+  /usr/src/linux-headers-3.0.0-12-generic/arch/x86/include/asm/fcntl.h \
+  include/asm-generic/fcntl.h \
+  include/linux/magic.h \
 
-/usr/little/github-test/github-test/kernel-debug/oops/oops.o: $(deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o)
+/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.o: $(deps_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.o)
 
-$(deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o):
+$(deps_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.o):

@@ -1,8 +1,9 @@
-cmd_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := gcc -Wp,-MD,/usr/little/github-test/github-test/kernel-debug/oops/.oops.o.d  -nostdinc -isystem /usr/lib/gcc/i686-linux-gnu/4.6.1/include  -I/usr/src/linux-headers-3.0.0-12-generic/arch/x86/include -Iarch/x86/include/generated -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(oops)"  -D"KBUILD_MODNAME=KBUILD_STR(oops)" -c -o /usr/little/github-test/github-test/kernel-debug/oops/.tmp_oops.o /usr/little/github-test/github-test/kernel-debug/oops/oops.c
+cmd_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o := gcc -Wp,-MD,/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/.proc.mod.o.d  -nostdinc -isystem /usr/lib/gcc/i686-linux-gnu/4.6.1/include  -I/usr/src/linux-headers-3.0.0-12-generic/arch/x86/include -Iarch/x86/include/generated -Iinclude  -include include/generated/autoconf.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -O2 -m32 -msoft-float -mregparm=3 -freg-struct-return -mpreferred-stack-boundary=2 -march=i686 -mtune=generic -maccumulate-outgoing-args -Wa,-mtune=generic32 -ffreestanding -fstack-protector -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Wframe-larger-than=1024 -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -pg -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DCC_HAVE_ASM_GOTO  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(proc.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(proc)" -DMODULE  -c -o /usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o /usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.c
 
-source_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := /usr/little/github-test/github-test/kernel-debug/oops/oops.c
+source_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o := /usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.c
 
-deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := \
+deps_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o := \
+    $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
     $(wildcard include/config/sysfs.h) \
@@ -16,7 +17,6 @@ deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/event/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/module/unload.h) \
     $(wildcard include/config/constructors.h) \
     $(wildcard include/config/debug/set/module/ronx.h) \
   include/linux/list.h \
@@ -479,7 +479,9 @@ deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o := \
   include/asm-generic/module.h \
   include/trace/events/module.h \
   include/trace/define_trace.h \
+  include/linux/vermagic.h \
+  include/generated/utsrelease.h \
 
-/usr/little/github-test/github-test/kernel-debug/oops/oops.o: $(deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o)
+/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o: $(deps_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o)
 
-$(deps_/usr/little/github-test/github-test/kernel-debug/oops/oops.o):
+$(deps_/usr/little/github-test/github-test/kernel-debug/proc/proc-rw/proc.mod.o):

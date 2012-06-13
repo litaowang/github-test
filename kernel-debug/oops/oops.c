@@ -44,5 +44,5 @@ void oops_exit(void)
 module_init(oops_init);
 module_exit(oops_exit);
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Litao Wang");
+MODULE_AUTHOR("Litao");
 

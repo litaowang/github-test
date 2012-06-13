@@ -1,1 +1,1 @@
-cmd_/usr/driver/oops/oops.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.0.0-12-generic/scripts/module-common.lds --build-id  -o /usr/driver/oops/oops.ko /usr/driver/oops/oops.o /usr/driver/oops/oops.mod.o
+cmd_/usr/little/github-test/github-test/kernel-debug/oops/oops.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.0.0-12-generic/scripts/module-common.lds --build-id  -o /usr/little/github-test/github-test/kernel-debug/oops/oops.ko /usr/little/github-test/github-test/kernel-debug/oops/oops.o /usr/little/github-test/github-test/kernel-debug/oops/oops.mod.o

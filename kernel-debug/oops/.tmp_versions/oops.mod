@@ -1,2 +1,2 @@
-/usr/driver/oops/oops.ko
-/usr/driver/oops/oops.o
+/usr/little/github-test/github-test/kernel-debug/oops/oops.ko
+/usr/little/github-test/github-test/kernel-debug/oops/oops.o
